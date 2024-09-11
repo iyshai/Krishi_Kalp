@@ -1,18 +1,21 @@
 import React from 'react'
-import Hero from '../hero/Hero'
+// import Hero from '../hero/Hero'
 import classes from './home.module.css'
 import illustration1 from '../../assets/male-delivery-guy-riding-scooter.svg'
 import illustration2 from '../../assets/delivery-location.svg'
 import illustration3 from '../../assets/deliveryman-with-pizza.svg'
-import Foods from '../foods/Foods'
-import Newsletter from '../newsletter/Newsletter'
+import Navbar from '../navbar/Navbar'
+// import Foods from '../foods/Foods'
+// import Newsletter from '../newsletter/Newsletter'
 
 const Home = () => {
   return (
+  
     <div className={classes.container}>
+      <Navbar/>
       <div className={classes.wrapper}>
-        <Hero />
-        <div className={classes.delivery}>
+        {/* <Hero /> */}
+        {/* <div className={classes.delivery}>
           <div className={classes.titles}>
             <span className={classes.deliverySubtitle}>Delivery</span>
             <h2 className={classes.deliveryTitle}>Always on time for you</h2>
@@ -31,9 +34,9 @@ const Home = () => {
               <h3>He is friendly and social</h3>
             </div>
           </div>
-        </div>
-        <Foods />
-        <Newsletter />
+        </div> */}
+        {/* <Foods /> */}
+        {/* <Newsletter /> */}
       </div>
     </div>
   )

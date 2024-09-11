@@ -1,0 +1,133 @@
+
+
+
+.community{
+    display: flex;
+    /* padding-top: 10vh; */
+    align-items: center;
+    flex-direction: column;
+    gap: 2vh;
+    background-image: url('../../assets/bg.jpg');
+    background-size: cover;
+    background-position: center;
+
+}
+.bottom-part{
+    width: 100vw;
+    height: 7vh;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   
+  gap: 1vw;
+    position: fixed;
+    bottom: 2%;
+}
+.postbox{
+    
+    width: 40vw;
+    height: 7vh;
+    border-radius: 1vw;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1vw;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+.sendbox{
+    width: 3.1vw;
+    height: 7vh;
+    border-radius: 1vw;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+.left-postbox{
+    display:flex ;
+    align-items: center;
+    justify-content: center;
+    gap: 1vw;
+}
+.left-postbox input{
+    border: none;
+}
+@media (max-width: 768px) {
+    .post {
+      width: 90vw;
+      height: auto;
+    }
+  
+    .post-image {
+      width: 25vw;
+      height: auto;
+    }
+  
+    .bottom-part {
+      width: 100vw;
+      height: 10vh;
+      bottom: 3%;
+    }
+  
+    .postbox {
+      width: 60vw;
+      height: auto;
+      padding: 2vw;
+    }
+  
+    .sendbox {
+      width: 5vw;
+      height: auto;
+    }
+  
+    .left-postbox input {
+      width: 50vw;
+    }
+  }
+  
+  /* For mobile phones */
+  @media (max-width: 480px) {
+    .post {
+      width: 95vw;
+      height: auto;
+      padding: 3vw;
+    }
+  
+    .post-image {
+      width: 40vw;
+      height: auto;
+    }
+  
+    .postbox {
+      width: 75vw;
+      height: auto;
+      padding: 3vw;
+    }
+  
+    .sendbox {
+      width: 8vw;
+      height: auto;
+    }
+  
+    .bottom-part {
+      width: 100vw;
+      height: 12vh;
+      bottom: 2%;
+    }
+  
+    .left-postbox input {
+      width: 60vw;
+      font-size: 3vw;
+    }
+  
+    .post-font1 {
+      font-size: 4vw;
+    }
+  
+    .post-icons {
+      gap: 3vw;
+    }
+  }

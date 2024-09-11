@@ -1,0 +1,92 @@
+.yojna-main{
+    display: flex;
+    /* padding-top: 10vh; */
+    align-items: center;
+    flex-direction: column;
+    gap: 2vh;
+    background-image: url('../../assets/bg.jpg');
+    background-size: cover;
+    background-position: center;;
+}
+
+
+.yojna-partmain{
+    gap: 1vw;
+    border-radius: 1vw;
+    display: flex;
+    flex-direction: column;
+    padding: 6vh 0vh;
+    margin-bottom: 20px;
+    align-items: center;
+    /* justify-content: center; */
+    width: 90vw;
+    min-height:90vh ;
+    /* background-color: aqua; */
+    background: rgba(255, 255, 255, 0.2); 
+     
+      backdrop-filter: blur(10px); 
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); 
+      border: 1px solid rgba(255, 255, 255, 0.3); 
+      
+      
+}
+
+@media (max-width: 768px) {
+    .yojnabox {
+        width: 90vw;
+        height: auto; /* Let content define height */
+        padding: 4vw;
+        border-radius: 3vw;
+    }
+
+    .yojnafont {
+        height: auto;
+    }
+
+    .yojnafont1 {
+        font-size: 3.5vh;
+    }
+
+    .yojnafont2 {
+        font-size: 2.5vh;
+    }
+
+    .yojnabtn {
+        width: 20vw;
+        height: 6vh;
+        border-radius: 3vw;
+    }
+
+    .yojna-partmain {
+        padding: 4vh 0;
+        width: 95vw;
+        min-height: 80vh;
+    }
+}
+
+@media (max-width: 480px) {
+    .yojnabox {
+        width: 95vw;
+        padding: 5vw;
+        border-radius: 4vw;
+    }
+
+    .yojnafont1 {
+        font-size: 3vh;
+    }
+
+    .yojnafont2 {
+        font-size: 2vh;
+    }
+
+    .yojnabtn {
+        width: 40vw;
+        height: 7vh;
+    }
+
+    .yojna-partmain {
+        padding: 3vh 0;
+        width: 100vw;
+        min-height: 80vh;
+    }
+}

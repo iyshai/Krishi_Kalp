@@ -6,12 +6,16 @@ import Home from './components/home/Home';
 import Login from './components/login/Login';
 import Signup from './components/signup/Signup';
 import Create from './components/create/Create';
-import FoodDetails from './components/foodDetails/FoodDetails';
-import FoodCatalog from './components/foodCatalog/FoodCatalog';
+// import FoodDetails from './components/foodDetails/FoodDetails';
+// import FoodCatalog from './components/foodCatalog/FoodCatalog';
 import Cart from './components/cart/Cart';
 import Checkout from './components/checkout/Checkout';
-import {useLocation} from 'react-router-dom'
+import {useLocation} from 'react-router-dom';
 import { useEffect } from 'react';
+import Chatbot from './components/chatbot/Chatbot';
+import Community from './components/community/Community';
+import Ecommerce from './components/ecommerce/ecommerse';
+import Yojna from './components/yogna/yojna';
 
 function App() {
  const location = useLocation()
@@ -23,16 +27,21 @@ function App() {
 
   return (
     <div>
-       <Navbar />
+       {/* <Navbar /> */}
        <Routes>
          <Route path='/' element={<Home />} />
          <Route path='/login' element={<Login />} />
          <Route path='/signup' element={<Signup />} />
          <Route path='/create' element={<Create />} />
-         <Route path='/food/:id' element={<FoodDetails />} />
-         <Route path='/foods/:id' element={<FoodCatalog />} />
+         {/* <Route path='/food/:id' element={<FoodDetails />} /> */}
+         {/* <Route path='/foods/:id' element={<FoodCatalog />} /> */}
          <Route path='/cart' element={<Cart />} />
          <Route path='/checkout' element={<Checkout />} />
+         <Route path='/chat-bot' element={<Chatbot/>}/>
+         <Route path='/community' element={<Community/>}/>
+         <Route path='/dukan' element={<Ecommerce/>}/>
+         <Route path='/yojna' element={<Yojna/>}/>
+
        </Routes>
        <Footer />
     </div>

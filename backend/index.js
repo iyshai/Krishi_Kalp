@@ -5,14 +5,31 @@ const mongoose = require("mongoose")
 const authController = require('./controllers/authController')
 const productController = require('./controllers/productController')
 const uploadController = require('./controllers/uploadController')
+const weatherController = require('./controllers/weatherController')
 const app = express()
+app.use(cors());
 
 // connect our db
-mongoose.set('strictQuery', false)
-mongoose.connect(process.env.MONGO_URL, () => console.log('DB is successfully connected'))
 
+mongoose.set('strictQuery', false);
+
+mongoose.connect(process.env.MONGO_URI, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+}).then(() => {
+  console.log('Connected to MongoDB');
+}).catch((err) => {
+  console.error('Error connecting to MongoDB:', err);
+});
+
+app.get('/', (req, res) => {
+  res.send('hello world')
+})
 // routes & middlewares
 // those two middlewares make req.body accessible, otherwise it would be undefined!!!
+
+
+app.use('/wea', weatherController);
 app.use(cors())
 app.use(express.json())
 app.use(express.urlencoded({extended: true}))

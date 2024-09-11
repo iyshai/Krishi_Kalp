@@ -6,6 +6,7 @@ import {Link, useNavigate} from 'react-router-dom'
 import img from '../../assets/womaneating2.jpg'
 import { login } from '../../redux/authSlice'
 
+
 const Login = () => {
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
@@ -17,7 +18,7 @@ const Login = () => {
       e.preventDefault()
 
       try {
-        const res = await fetch(`http://localhost:5000/auth/login`, {
+        const res = await fetch(`http://localhost:4000/auth/login`, {
           headers: {
             'Content-Type': 'application/json'
           },
@@ -39,6 +40,8 @@ const Login = () => {
   }
 
   return (
+    
+      
     <div className={classes.loginContainer}>
       <div className={classes.loginWrapper}>
         <div className={classes.loginLeftSide}>
@@ -60,6 +63,7 @@ const Login = () => {
         </div>
       </div>
     </div>
+
   )
 }
 

@@ -1,0 +1,75 @@
+.ecommain1{
+    /* display: flex; */
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('../../assets/bg.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+
+.ecompartmain{
+    gap: 1vw;
+    border-radius: 1vw;
+    display: flex;
+    flex-direction: column;
+    padding: 3vh 13vh;
+    /* align-items: center;
+    justify-content: center; */
+    width: 90vw;
+    min-height:90vh ;
+    /* background-color: aqua; */
+    background: rgba(255, 255, 255, 0.2); 
+     
+      backdrop-filter: blur(10px); 
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); 
+      border: 1px solid rgba(255, 255, 255, 0.3); 
+      margin-left: 8vh;
+      
+      
+}
+.ecomagrishops{
+    display: flex;
+    gap: 1vw;
+}
+.ecomfont{
+    color: white;
+    font-weight: 500;
+}
+
+  
+  /* For mobile phones */
+  @media (max-width: 800px) {
+    .ecom-box {
+      width: 90vw;
+      height: auto;
+    }
+  
+    .ecom-box-text h1 {
+      font-size: 5vw;
+    }
+  
+    .ecom-box-smalltext h3 {
+      font-size: 3vw;
+    }
+  
+    .ecom-box-smalltext h5 {
+      font-size: 2.5vw;
+    }
+  
+    .ecompartmain {
+      padding: 1vh 2vh;
+      width: 100vw;
+    }
+  
+    .ecomagrishops {
+      flex-direction: column;
+      gap: 3vh;
+    }
+  
+    .ecommain1 {
+      flex-direction: column;
+    }
+  }
