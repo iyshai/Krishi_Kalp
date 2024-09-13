@@ -16,6 +16,7 @@ import Chatbot from './components/chatbot/Chatbot';
 import Community from './components/community/Community';
 import Ecommerce from './components/ecommerce/ecommerse';
 import Yojna from './components/yogna/yojna';
+import WeatherApp from './components/weather/Weather';
 
 function App() {
  const location = useLocation()
@@ -41,6 +42,7 @@ function App() {
          <Route path='/community' element={<Community/>}/>
          <Route path='/dukan' element={<Ecommerce/>}/>
          <Route path='/yojna' element={<Yojna/>}/>
+         <Route path='/weather' element={<WeatherApp/>}/>
 
        </Routes>
        <Footer />

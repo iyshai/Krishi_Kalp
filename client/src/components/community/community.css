@@ -1,5 +1,7 @@
 
-
+.outer-container{
+  
+}
 
 .community{
     display: flex;
@@ -10,7 +12,6 @@
     background-image: url('../../assets/bg.jpg');
     background-size: cover;
     background-position: center;
-
 }
 .bottom-part{
     width: 100vw;
@@ -20,8 +21,9 @@
    justify-content: center;
    
   gap: 1vw;
-    position: fixed;
+    position:fixed;
     bottom: 2%;
+    
 }
 .postbox{
     
@@ -34,6 +36,7 @@
     justify-content: space-between;
     padding: 1vw;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    position: absolute;
 }
 .sendbox{
     width: 3.1vw;

@@ -5,6 +5,7 @@ import {useDispatch} from 'react-redux'
 import {Link, useNavigate} from 'react-router-dom'
 import img from '../../assets/womaneating2.jpg'
 import { login } from '../../redux/authSlice'
+import Navbar from '../navbar/Navbar'
 
 
 const Login = () => {
@@ -43,10 +44,11 @@ const Login = () => {
     
       
     <div className={classes.loginContainer}>
+<Navbar/>
       <div className={classes.loginWrapper}>
-        <div className={classes.loginLeftSide}>
+        {/* <div className={classes.loginLeftSide}>
           <img src={img} className={classes.leftImg}/>
-        </div>
+        </div> */}
         <div className={classes.loginRightSide}>
           <h2 className={classes.title}>Login</h2>
           <form onSubmit={handleLogin} className={classes.loginForm}>

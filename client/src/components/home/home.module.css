@@ -1,12 +1,43 @@
 
-
-.container{
+.container {
     width: 100vw;
     height: 100vh;
     background-image: url('../../assets/bg.jpg');
-  background-size: cover;
-  background-position: center;
-}
+    background-size: cover;
+    /* background-position: center; */
+    /* display: flex;               Optionally for aligning content */
+    /* justify-content: center;      Center content horizontally */
+    /* align-items: center;          Center content vertically */
+    padding: 5px;                /* Add padding for mobile screens */
+  }
+  .search-bar-container {
+    padding-top: 20vh;
+    width: 40%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 200px;
+  }
+  /* Mobile devices */
+  @media (max-width: 767px) {
+    .container {
+      background-size: contain;    /* Make the background fit within the viewport */
+      background-position: top;    /* Position background at the top for smaller screens */
+      height: auto;                /* Allow container to grow based on content */
+      padding: 10px;               /* Smaller padding on mobile */
+    }
+  }
+  
+  /* Tablets and small laptops */
+  @media (min-width: 768px) and (max-width: 1024px) {
+    .container {
+      background-size: cover;      /* Still cover the viewport but adjust for tablet */
+      background-position: center; /* Center the background image */
+      padding: 15px;               /* Moderate padding for tablets */
+    }
+  }
+  
 
 .deliveryInfos{
     display: flex;

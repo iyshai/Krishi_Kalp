@@ -5,6 +5,7 @@ import classes from './signup.module.css'
 import img from '../../assets/womaneating.jpg'
 import { register } from '../../redux/authSlice'
 import { useDispatch } from 'react-redux'
+import Navbar from '../navbar/Navbar'
 
 const Signup = () => {
   const [username, setUsername] = useState("")
@@ -40,16 +41,14 @@ const Signup = () => {
 
   return (
     <div className={classes.signUpContainer}>
+<Navbar/>
       <div className={classes.signUpWrapper}>
-        <div className={classes.signUpLeftSide}>
-          <img src={img} className={classes.leftImg} />
-        </div>
         <div className={classes.signUpRightSide}>
           <h2 className={classes.title}>Sign Up</h2>
           <form onSubmit={handleSignup} className={classes.signUpForm}>
-            <input type="text" placeholder="Type username" onChange={(e) => setUsername(e.target.value)}/>
-            <input type="email" placeholder="Type email" onChange={(e) => setEmail(e.target.value)}/>
-            <input type="password" placeholder="Type password"  onChange={(e) => setPassword(e.target.value)}/>
+            <input type="text" placeholder="Type username" onChange={(e) => setUsername(e.target.value)} required/>
+            <input type="email" placeholder="Type email" onChange={(e) => setEmail(e.target.value)} required/>
+            <input type="password" placeholder="Type password"  onChange={(e) => setPassword(e.target.value)} required/>
             <button className={classes.submitBtn}>Sign Up</button>
             <p>Already have an account? <Link to='/login'>Login</Link></p>
           </form>

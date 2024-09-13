@@ -1,20 +1,35 @@
-import React from 'react'
+// import React from 'react'
 // import Hero from '../hero/Hero'
+import React, { useState } from 'react';
 import classes from './home.module.css'
 import illustration1 from '../../assets/male-delivery-guy-riding-scooter.svg'
 import illustration2 from '../../assets/delivery-location.svg'
 import illustration3 from '../../assets/deliveryman-with-pizza.svg'
 import Navbar from '../navbar/Navbar'
+import SearchBar from '../searchBar/SearchBar'
+import  SearchResultsList from '../searchBar/SearchResultsList'
+
 // import Foods from '../foods/Foods'
 // import Newsletter from '../newsletter/Newsletter'
 
 const Home = () => {
+  const [results, setResults] = useState([]);
   return (
   
     <div className={classes.container}>
       <Navbar/>
-      <div className={classes.wrapper}>
-        {/* <Hero /> */}
+      <div>
+      <div className="search-bar-container">
+        <SearchBar setResults={setResults} />
+        {results && results.length > 0 && <SearchResultsList results={results} />}
+       
+      </div>
+      </div>
+
+
+
+
+      {/* <div className={classes.wrapper}> */}
         {/* <div className={classes.delivery}>
           <div className={classes.titles}>
             <span className={classes.deliverySubtitle}>Delivery</span>
@@ -37,7 +52,7 @@ const Home = () => {
         </div> */}
         {/* <Foods /> */}
         {/* <Newsletter /> */}
-      </div>
+      {/* </div> */}
     </div>
   )
 }

@@ -2,13 +2,16 @@
     height: 100vh;
     width: 100vw;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
     background-color: #f00;
     position: absolute;
     top: 0;
     left: 0;
     z-index: 999999;
+    background-image: url('../../assets/bg.jpg');
+  background-size: cover;
+  background-position: center;
 }
 
 /* 6 9s */
@@ -16,11 +19,13 @@
 .loginWrapper{
     border-radius: 20px;
     width: 45vw;
-    height: 60vh;
+    height: 70vh;
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
     justify-content: center;
+    margin-top: 60px;
+    
 }
 /* left */
 .loginLeftSide{
@@ -40,16 +45,17 @@
 .loginRightSide{
     margin: 0;
     flex: 1;
-    background-color: #fff;
+    background-color:rgba(255, 255, 255, 0.54);;
     height: 100%;
     width: 100%;
     overflow: hidden;
+    border-radius: 5%;
 }
 
 .loginRightSide > h2{
     text-align: center;
     font-size: 36px;
-    color: #f22a2a;
+    color: #050101;
     margin: 2.5rem 0;
 }
 
@@ -69,17 +75,17 @@
 }
 
 .loginForm > input{
-    outline: none;
-    border: none;
-    border-bottom: 1px solid #333;
+    
     width: 50%;
+    height: 50px;
+    background-color: white;
     padding-left: 0.25rem;
     padding-bottom: 0.25rem;
-    transition: 150ms all ease-in-out;
 }
 
 .loginForm >input:focus{
     padding-left: 0.75rem;
+
 }
 
 .loginForm>.submitBtn{
@@ -87,7 +93,7 @@
     outline: none;
     border: 1px solid transparent;
     padding: 0.5rem 1.5rem;
-    background-color: #f22a2a;
+    background-color: #1958df;
     color: #fff;
     font-weight: 500;
     font-size: 20px;
