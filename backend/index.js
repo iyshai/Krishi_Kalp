@@ -5,11 +5,13 @@ const mongoose = require("mongoose")
 const authController = require('./controllers/authController')
 const productController = require('./controllers/productController')
 const uploadController = require('./controllers/uploadController')
-const weatherController = require('./controllers/weatherController')
+const commodityController = require('./controllers/commodityController')
 const app = express()
 app.use(cors());
 
 // connect our db
+
+
 
 mongoose.set('strictQuery', false);
 
@@ -29,11 +31,12 @@ app.get('/', (req, res) => {
 // those two middlewares make req.body accessible, otherwise it would be undefined!!!
 
 
-app.use('/wea', weatherController);
+
 app.use(cors())
 app.use(express.json())
 app.use(express.urlencoded({extended: true}))
 app.use('/images', express.static('public/images'))
+app.use('/commodities', commodityController)
 app.use('/auth', authController)
 app.use('/product', productController)
 app.use('/upload', uploadController)

@@ -17,6 +17,7 @@ import Community from './components/community/Community';
 import Ecommerce from './components/ecommerce/ecommerse';
 import Yojna from './components/yogna/yojna';
 import WeatherApp from './components/weather/Weather';
+// import CommodityForm from './components/commodity/CommodityForm';
 
 function App() {
  const location = useLocation()
@@ -43,6 +44,7 @@ function App() {
          <Route path='/dukan' element={<Ecommerce/>}/>
          <Route path='/yojna' element={<Yojna/>}/>
          <Route path='/weather' element={<WeatherApp/>}/>
+         {/* <Route path='mandi-dam' element={<CommodityForm/>}/> */}
 
        </Routes>
        <Footer />
